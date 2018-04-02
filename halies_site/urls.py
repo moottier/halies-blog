@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 #from django.urls import path #WILL NOT WORK WITH DJANGO 1.11 running on PA
 from django.conf.urls import url
+from django.conf.urls import include
 
 urlpatterns = [
-    url('admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
+    url(r'', include('blog.urls'))
 ]

@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Halie's Blog</title>
+  </head>
+  <body>
+    <div>
+      <h1><a href="/">Halie's Science Blog</a></h1>
+    </div>
+    {% for post in posts %}
+        <div>
+          <p>published: {{ post.publushed_date }}</p>
+	  <h1><a href="">{{ post.title }}</a></h1>
+	  <p>{{ post.text|linebreaksbr }}</p>
+        </div>  
+    {% endfor %}
+  </body>
+</html>
