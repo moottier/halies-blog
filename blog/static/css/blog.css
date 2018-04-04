@@ -1,6 +1,5 @@
 h1 a {
     color: #c2cad0;
-    font-family: 'Pacifico';
 }
 body {
     padding-left: 15px;
@@ -11,6 +10,7 @@ body {
     padding: 20px 20px 20px 40px;
 }
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    font-family: 'Source Sans Pro', sans-serif;    
     color: #c2cad0;
     font-size: 36pt;
     text-decoration: none;
@@ -19,7 +19,7 @@ body {
     margin-left: 40px;
 }
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 .date {
     color: #c2cad0;
@@ -37,6 +37,7 @@ h1, h2, h3, h4 {
     margin-right: 20px;
 }
 .post {
+    font-family: 'PT Serif', sefif;1
     margin-bottom: 70px;
 }
 .post h1 a, .post h1 a:visited {
