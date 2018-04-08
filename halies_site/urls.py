@@ -17,8 +17,10 @@ from django.contrib import admin
 #from django.urls import path #WILL NOT WORK WITH DJANGO 1.11 running on PA
 from django.conf.urls import url
 from django.conf.urls import include
+from django.contrib.auth import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', include('blog.urls'))
+    url(r'^accounts/login/$', views.login, name='login'),
+    url(r'', include('blog.urls')),
 ]
