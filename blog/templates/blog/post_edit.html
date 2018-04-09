@@ -1,4 +1,5 @@
 {% extends 'blog/base.html' %}
+{% load markdown_deux_tags %}
 
 {% block content %}
 <h1>New post</h1>
@@ -6,4 +7,9 @@
   {{ form.as_p }}
   <button type="submit" class="save btn btn-default">Save</button>
 </form>
+<p>
+  <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">Markdown syntax</a> allowed, but no raw HTML. Examples: **bold**, *italic*, indent 4 spaces for a code block.
+</p>
 {% endblock %}
+
+
