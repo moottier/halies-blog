@@ -2,7 +2,12 @@ h1 a {
     color: #c2cad0;
 }
 body {
-    padding-left: 15px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+img {
+    max-width: 70vw;
+    height: auto;
 }
 .page-header {
     background-color: #e7717d;
@@ -37,6 +42,7 @@ h1, h2, h3, h4 {
     margin-right: 20px;
 }
 .post {
+    max-width: 70vw;
     font-family: 'PT Serif', sefif;1
     margin-bottom: 70px;
 }
@@ -47,3 +53,4 @@ h1, h2, h3, h4 {
 .comment {
     margin: 20px 0px 20px 20px;
 }
+

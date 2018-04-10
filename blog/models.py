@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from django.utils.safestring import mark_safe
+from markdown_deux import markdown
 
 class Post(models.Model):
     author = models.ForeignKey(
@@ -22,7 +24,10 @@ class Post(models.Model):
         return self.title
     def approved_comments(self):
         return self.comments.filter(approved_comment=True)
-
+    def render_markdown(self):
+        text = self.text
+        return mark_safe(markdown(text))
+    
 class Comment(models.Model):
     post = models.ForeignKey(
         'blog.Post',

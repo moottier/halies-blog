@@ -5,7 +5,7 @@ from .models import Post, Comment
 from .forms import PostForm, CommentForm
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date').reverse()
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 @login_required
@@ -47,7 +47,7 @@ def post_draft_list(request):
 @login_required
 def post_publish(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    post.published
+    post.publish()
     return redirect('post_detail', pk=pk)
 
 @login_required
